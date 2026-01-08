@@ -5,65 +5,97 @@
     <title>Slatki box - SaTina Ruže</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
+        /* OPĆE STILOVI */
         body {
             margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #ffe6f0, #ffd1dc);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
             font-family: 'Playfair Display', serif;
-            background: linear-gradient(135deg, #8b1d2c, #b03040, #d75a70);
-            color: #fff;
         }
 
         header {
             text-align: center;
             padding: 80px 20px 40px;
+            background: linear-gradient(135deg, rgba(255,182,193,0.4), rgba(255,105,180,0.3));
+            position: relative;
         }
 
         header h1 {
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            color: #d63384;
         }
 
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* GALERIJA SLATKI BOX */
         .box-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 25px;
             max-width: 1000px;
             margin: 40px auto;
+            position: relative;
         }
 
         .box-card {
-            background: rgba(255, 0, 50, 0.15);
-            border-radius: 15px;
+            background: #ffe6f0;
+            border-radius: 20px;
             padding: 20px;
             transition: 0.3s;
             text-align: center;
+            color: #a61d64;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box-card::before {
+            content: "🌹";
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.05;
+            top: 10px;
+            right: 10px;
+            pointer-events: none;
         }
 
         .box-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 0, 50, 0.25);
+            transform: translateY(-6px);
+            background: #ffd1dc;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
         }
 
         .box-card img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 15px;
             margin-bottom: 15px;
         }
 
         .box-card p {
             font-weight: 600;
-            color: #ffd1d9;
+            color: #a61d64;
         }
 
+        /* BACK BUTTON */
         .back-button {
             display: inline-block;
             margin: 40px auto 60px;
             padding: 12px 30px;
             border-radius: 30px;
-            background: #ffd1d9;
-            color: #5a0f1b;
+            background: #ffd1dc;
+            color: #a61d64;
             text-decoration: none;
             font-weight: 600;
             transition: 0.3s;
@@ -74,11 +106,25 @@
             transform: scale(1.05);
         }
 
+        /* FOOTER */
         footer {
             text-align: center;
             padding: 30px 20px;
-            background: rgba(0,0,0,0.3);
+            background: #ffd1dc;
             font-size: 0.9rem;
+            color: #a61d64;
+            position: relative;
+        }
+
+        footer::before {
+            content: "🌹";
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.05;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(10deg);
+            pointer-events: none;
         }
     </style>
 </head>
@@ -98,7 +144,6 @@
         <img src="./SLATKI BOX 2.jpg" alt="Slatki box 2">
         <p>Romantični crveni</p>
     </div>
-    
     <!-- Dodaj još box buketa po potrebi -->
 </section>
 
