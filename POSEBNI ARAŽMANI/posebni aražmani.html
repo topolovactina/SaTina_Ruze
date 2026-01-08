@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Posebni aražmani - SaTina Ruže</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #8b1d2c, #b03040, #d75a70);
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .box-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .box-card {
+            background: rgba(255, 0, 50, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .box-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 0, 50, 0.25);
+        }
+
+        .box-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .box-card p {
+            font-weight: 600;
+            color: #ffd1d9;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 40px auto 60px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background: #ffd1d9;
+            color: #5a0f1b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #ffffff;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.3);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Posebni aražmani</h1>
+    <p>Po prigodi i tvojoj mašti – boje, ukrasi, personalizacija</p>
+</header>
+
+<section class="box-gallery">
+    <div class="box-card">
+        <img src="box1.jpg" alt="Posebni aranžman 1">
+        <p>Crveni glamur</p>
+    </div>
+    <div class="box-card">
+        <img src="box2.jpg" alt="Posebni aranžman 2">
+        <p>Romantični crveni</p>
+    </div>
+    <div class="box-card">
+        <img src="box3.jpg" alt="Posebni aranžman 3">
+        <p>Luksuzni aranžman</p>
+    </div>
+    <!-- Dodaj još box buketa po potrebi -->
+</section>
+
+<div style="text-align:center;">
+    <a href="../index.html" class="back-button">⬅ Povratak na glavnu stranicu</a>
+</div>
+
+<footer>
+    © 2025 SaTina Ruže • Slavonski Brod i okolica • 🌹
+</footer>
+
+</body>
+</html>

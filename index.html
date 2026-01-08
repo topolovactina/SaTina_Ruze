@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Satina Ruže</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #5a0f1b, #8b1d2c, #b03040);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* NAVIGACIJA */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ffd1d9;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 150px 20px 90px; /* više prostora zbog navigacije */
+            background: rgba(0,0,0,0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* LOGO u gornjem desnom kutu */
+        .logo-corner {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 100px;
+            max-width: 20%;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+            z-index: 1001;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background: #ffd1d9;
+            color: #5a0f1b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            z-index: 1;
+            position: relative;
+        }
+
+        .cta:hover {
+            background: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* LATICE */
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: pink;
+            border-radius: 50%;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #ffd1d9;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        /* CARDS & GRIDS */
+        .gallery,
+        .reasons,
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .rose-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .rose-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.25);
+        }
+
+        .rose-card small {
+            display: block;
+            margin-top: 8px;
+            opacity: 0.85;
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.45);
+            font-size: 0.9rem;
+        }
+
+        /* WHATSAPP BUTTON */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            font-size: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+            transition: transform 0.3s, box-shadow 0.3s;
+            z-index: 999;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGACIJA -->
+<nav>
+    <a href="#kolekcija">Kolekcija</a>
+    <a href="#zašto">Zašto</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<!-- LOGO u gornjem desnom kutu -->
+<img src="logo_satina.jpg" alt="Satina Ruže logo" class="logo-corner">
+
+<header>
+    <h1>SaTina Ruže</h1>
+
+    <p>Ručno izrađene satenske ruže koje spajaju eleganciju, ljubav i bezvremensku ljepotu u svakom aranžmanu.</p>
+    <a href="#kolekcija" class="cta">Pogledaj kolekciju</a>
+</header>
+
+<!-- SECTIONS OSTATKA STRANICE OSTAJU ISTE -->
+<section>
+    <h2 id="zašto">O nama</h2>
+    <p>
+        SaTina Ruže nastale su iz ljubavi prema detaljima, kreativnosti i ljepoti darivanja.
+        Svaka satenska ruža izrađena je ručno, s posebnom pažnjom i puno srca.
+        Naši aranžmani nisu samo pokloni – oni su emocija, uspomena i znak pažnje.
+    </p>
+    <p>
+        Vjerujemo da svaki trenutak zaslužuje nešto posebno – rođendan, godišnjicu,
+        zahvalu ili mali znak pažnje bez posebnog razloga.
+    </p>
+    <p>📍 Slavonski Brod i okolica</p>
+    <p><em>"Cvijet koji traje vječno"</em></p>
+</section>
+
+<section>
+    <h2>Zašto Satina Ruže?</h2>
+    <div class="reasons">
+        <div class="rose-card">🌹 Ručno izrađeni aranžmani</div>
+        <div class="rose-card">🎁 Svaki poklon je unikatan</div>
+        <div class="rose-card">💖 Izrađeno s ljubavlju</div>
+        <div class="rose-card">📍 Lokalna izrada</div>
+    </div>
+</section>
+
+<section id="kolekcija"> 
+    <h2>Naša Kolekcija Buketa</h2>
+    <div class="gallery">
+        <a href="./BOX BUKETI/box buketi.html" class="rose-card">
+            🎀 Box buketi
+            <small>Kutije pune stila i vrpca za svaki trenutak</small>
+        </a>
+        <a href="./SLATKI TRENUCI/slatki trenuci.html" class="rose-card">
+            🍬 Slatki trenuci
+            <small>Buketi koji mame osmijeh – čokolade, bomboni, mini delicije</small>
+        </a>
+        <a href="./SATENSKI BUKETI/satenski buketi.html" class="rose-card">
+            🌸 Satenski buket
+            <small>Pravi satenski buketi – klasična elegancija bez dodataka</small>
+        </a>
+        <a href="./POSEBNI ARAŽMANI/posebni aražmani.html" class="rose-card">
+            🎉 Posebni aranžmani
+            <small>Po prigodi i tvojoj mašti – boje, ukrasi, personalizacija</small>
+        </a>
+    </div>
+</section>
+
+<section>
+    <h2>Kako naručiti?</h2>
+    <div class="steps">
+        <div class="rose-card">1️⃣ Odaberi aranžman</div>
+        <div class="rose-card">2️⃣ Javi se putem Instagrama ili WhatsAppa</div>
+        <div class="rose-card">3️⃣ Dogovor detalja</div>
+        <div class="rose-card">4️⃣ Izrada & preuzimanje</div>
+    </div>
+</section>
+
+<section>
+    <h2>Prigode</h2>
+    <div class="gallery">
+        <div class="rose-card">🎂 Rođendani</div>
+        <div class="rose-card">❤️ Godišnjice</div>
+        <div class="rose-card">💌 Valentinovo</div>
+        <div class="rose-card">🙏 Zahvale</div>
+    </div>
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>
+        Instagram:
+        <a href="https://www.instagram.com/satina_ruze/" target="_blank" style="color:#ffd1d9;">
+            @satina_ruze
+        </a>
+    </p>
+    <p>WhatsApp: <strong>099 655 9024</strong></p>
+</section>
+
+<footer>
+    © 2025 SaTina Ruže • Slavonski Brod i okolica • 🌹
+</footer>
+
+<a href="https://wa.me/385996559024?text=Pozdrav!%20Zanima%20me%20narudžba%20SaTina%20Ruže%20🌹"
+   class="whatsapp-button"
+   target="_blank"
+   aria-label="WhatsApp narudžba">
+    💬
+</a>
+
+<!-- LATICE -->
+<style>
+    .petal {
+        position: absolute;
+        width: 15px;
+        height: 25px;
+        background: pink;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* oblik latice */
+        opacity: 0.8;
+        pointer-events: none;
+        transform: rotate(0deg);
+        z-index: 0;
+    }
+</style>
+
+<script>
+    const body = document.body;
+
+    function createPetal() {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        petal.style.left = Math.random() * window.innerWidth + 'px';
+        petal.style.background = `hsl(${Math.random() * 20 + 330}, 70%, 80%)`; // ružičasto-ljubičasta
+        const size = 10 + Math.random() * 15;
+        petal.style.width = size + 'px';
+        petal.style.height = size * 1.6 + 'px';
+        petal.style.opacity = 0.5 + Math.random() * 0.5;
+        body.appendChild(petal);
+
+        let top = -30;
+        let rotation = Math.random() * 360;
+        const fallSpeed = 1 + Math.random() * 2;
+        const swingAmplitude = 50 + Math.random() * 50;
+        const swingFrequency = 0.01 + Math.random() * 0.02;
+        const rotationSpeed = (Math.random() - 0.5) * 2;
+
+        function fall() {
+            top += fallSpeed;
+            rotation += rotationSpeed;
+            petal.style.top = top + 'px';
+            petal.style.transform = `rotate(${rotation}deg)`;
+            // lagano ljuljanje
+            const swing = Math.sin(top * swingFrequency) * swingAmplitude;
+            petal.style.left = parseFloat(petal.style.left) + swing * 0.02 + 'px';
+
+            if (top < window.innerHeight + 50) {
+                requestAnimationFrame(fall);
+            } else {
+                petal.remove();
+            }
+        }
+
+        fall();
+    }
+
+    setInterval(createPetal, 300);
+</script>
+
+</body>
+</html>
